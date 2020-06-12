@@ -21,6 +21,10 @@
  *
  *
  *   void修饰的方法只能单独调用
+ *
+ *
+ * 方法详情解析：
+ *    除了静态方法之外的所有方法都只能通过对象调用， static关键字的方法可以直接调用
  * */
 public class MethodDemo {
     public static void main(String[] args) {

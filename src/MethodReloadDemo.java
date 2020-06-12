@@ -39,7 +39,8 @@ public class MethodReloadDemo {
     }
     public static boolean compare(byte a, byte b) {
         return a == b ? true : false;
-    }public static boolean compare(long a, long b) {
+    }
+    public static boolean compare(long a, long b) {
         return a == b ? true : false;
     }
 

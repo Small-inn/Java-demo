@@ -34,5 +34,49 @@ public class ArrayDemo {
         System.out.println(arr2[0]);
         System.out.println(arr2[1]);
         System.out.println(arr2[2]);
+
+        printArr(arr2);
+        arrArrDemo();
+    }
+
+    public static void printArr(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+    /**
+     * 二维数组：
+     *   数据类型[][] 数组名
+     *   数据类型 数组名[][]
+     *   数据类型[] 数组名[]
+     * */
+    public static void arrArrDemo() {
+        System.out.println("-------");
+        int[][] arr = new int[][]{{1, 2, 3}, {5, 6, 7}};
+        int[][] arr2 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] arr3 = new int[9][9];
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.println(arr[i][j]);
+            }
+        }
+        System.out.println("-------");
+        for (int i = 0; i < arr2.length; i++) {
+            for (int j = 0; j < arr2[i].length; j++) {
+                System.out.print(arr2[i][j] + "  ");
+            }
+            System.out.println();
+        }
+        System.out.println("-------");
+        for (int i = 1; i <= arr3.length; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + "*" + i + " ");
+                if (i == j) {
+                    break;
+                }
+            }
+            System.out.println();
+        }
     }
 }
