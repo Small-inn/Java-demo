@@ -12,11 +12,15 @@
  * */
 public class ConstructorDemo {
     public static void main(String[] args) {
-        Student st = new Student();
+        Student1 st = new Student1();
+        st.setName("lx");
+        st.setAge(20);
+        System.out.println(st.getName());
+        System.out.println(st.getAge());
     }
 }
 
-class Student {
+class Student1 {
     private String name;
     private int age;
 
