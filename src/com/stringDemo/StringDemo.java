@@ -1,3 +1,5 @@
+package com.stringDemo;
+
 /**
  * String：字符串类
  *      有多个字符组成的一串数据
@@ -16,6 +18,12 @@
  *      boolean equalsIgnoreCase(String str) 比较字符串的内容是否相同,不区分大小写
  *      boolean startsWith(String str) 判断字符串对象是否以指定str开头
  *      boolean endsWith(String str) 判断字符串对象是否以指定str结尾
+ * String类的获取功能：
+ *      int length(): 获取字符串的长度，就是字符串个数
+ *      char charAt(int index):获取指定位置索引的字符
+ *      int indexOf(String str): 获取str第一次出现的索引
+ *      String substring(int start)： 从start开始截取字符串
+ *      String substring(int start, int end)： 从start开始，到end结束截取字符串
  * */
 public class StringDemo {
     public static void main(String[] args) {
@@ -28,5 +36,12 @@ public class StringDemo {
 
         String s3 = new String(chs, 1, 4);
         System.out.println(s3);
+
+        String s4 = "hello";
+        String s5 = "hello";
+        String s6 = "Hello";
+        System.out.println(s4.equals(s5));
+        System.out.println(s4.equalsIgnoreCase(s6));
+        System.out.println(s4.endsWith("llo"));
     }
 }
