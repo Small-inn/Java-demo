@@ -24,6 +24,14 @@ package com.stringDemo;
  *      int indexOf(String str): 获取str第一次出现的索引
  *      String substring(int start)： 从start开始截取字符串
  *      String substring(int start, int end)： 从start开始，到end结束截取字符串
+ * String类的转换功能：
+ *      char[] toCharArray(): 把字符串转换为字符数组
+ *      String toLowerCase(): 把字符串转换为小写字符串
+ *      String toUpperCase()：把字符串转换为大写字符串
+ * String类的其他功能：
+ *      String trim()：去除字符串两端空格
+ *      String[] split(String str)：按指定符号分割字符串
+ *
  * */
 public class StringDemo {
     public static void main(String[] args) {
