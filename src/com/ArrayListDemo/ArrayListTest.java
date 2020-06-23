@@ -19,7 +19,7 @@ public class ArrayListTest {
         }
 
         System.out.println(arrayList);
-
+//      2.0
         ArrayList<Student> array = new ArrayList<Student>();
         for (int i = 0; i < 2; i++) {
             addStu(array);
