@@ -1,5 +1,6 @@
 package com.IODemo;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -11,10 +12,14 @@ import java.io.IOException;
  *          fileWriter(String fileName): 传递一个文件名称
  *          输出流写数据步骤：
  *              A: 创建输出流对象
- *              B: 调用输出流对象的写数据方法
+ *              B: 调用输出流对象的写数据方法，并刷新缓冲区
  *              C: 释放资源
  *      - 输入流
- *          FileReader
+ *          FileReader(String fileName)
+ *              A:创建输入流对象
+ *              B:调用输入流对象的读数据方法
+ *              C:释放资源
+ *
  * */
 public class IODemo {
     public static void main(String[] args) throws IOException { // IO流异常
@@ -28,5 +33,9 @@ public class IODemo {
         fw.write("IO流你好"); // 数据没有直接写到文件，其实是写到了内存缓冲区
         fw.flush(); // 刷新一下
         fw.close(); // 释放资源
+
+        FileReader fr = new FileReader("c.txt");
+        int ch = fr.read();
+        System.out.println(ch);
     }
 }
