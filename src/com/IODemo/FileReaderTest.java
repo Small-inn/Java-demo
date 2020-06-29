@@ -4,6 +4,7 @@ package com.IODemo;
  *
  * 方法:
  *      int read(): 一次读取一个字符
+ *      int read(char): 字符数组
  * */
 import java.io.FileReader;
 import java.io.FileWriter;
