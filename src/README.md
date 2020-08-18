@@ -117,3 +117,18 @@ JAVA
     - 类图：UML类图、业务逻辑和所有支持结构一同被用于定义全部的代码结构
     - 建模工具：Visio、Rational Rose、PowerDesign
     
+## 异常
+1. 定义
+    - try{}catch{}finally{}
+2. 异常抛出
+    - throw：将产生的动作抛出（动作）
+    - throws：声明将要抛出任何种类的异常（声明）
+        ```
+            public void 方法名(参数列表) { throw new Exception() }
+        ```
+3. 自定义异常
+    ```
+        class 自定义异常类 extends 异常类型 {}
+    ```
+    
+    

@@ -24,7 +24,9 @@ public class TryCatchTest {
         } catch(Exception e) {
             e.printStackTrace();
             System.out.println("循环抛出异常了！！！");
+        } finally {
+            System.out.println("我是finally，是我是我，哈哈哈哈");
+            return 0;
         }
-        return 0;
     }
 }
