@@ -1,11 +1,11 @@
 SQL
 ---
 ## 简介
-    - 用于访问和处理数据库的标准计算机语言
-    - SQL指机构优化查询语言
-    - SQL使我们有能力访问数据库
-    - SQL是一种ANS（美国国家标准化组织）的标准计算机语言
-    - SQL对大小写不敏感
+   - 用于访问和处理数据库的标准计算机语言
+   - SQL指机构优化查询语言
+   - SQL使我们有能力访问数据库
+   - SQL是一种ANS（美国国家标准化组织）的标准计算机语言
+   - SQL对大小写不敏感
 ## 语法
 1. 数据操作语言（DML）
     - SELECT - 从数据库表中获取数据
@@ -28,11 +28,12 @@ SQL
     - 用于规定选择的标准
     - SELECT column_name(s) FROM table_name WHERE 列 运算符 值
         * 例如：SELECT * FROM Persons WHERE City='Beijing'
+        
     | 操作符 | 描述 |
-    | ----  | ---- | 
+    | ------  | ----- | 
     | =  |  等于  |
     | <> |  不等于 |
-    | >  |  大于  |
+    | '>'  |  大于  |
     | <  |  小于  |
     | >= |  大于等于  |
     | <=  |  小于等于  |
@@ -83,3 +84,33 @@ SQL
 5. BETWEEN操作符
     - 操作符BETWEEN...AND会选取介于两个值之间的数据范围。可以是数值、文本或者日期
     - SELECT colum_name(s) FROM table_name WHERE column_name BETWEEN value1 AND vlaue2
+6. Create Index语句
+    - 用于在表中创建索引，在不读取整个表的情况下，索引使数据库应用程序可以更快地查找数据
+    - 用户无法看到索引，它们只能被用来加速搜索/查询。
+    - **注释：** 更新一个包含索引的表需要比更新一个没有索引的表更多的时间，这是由于索引本身也需要更新。因此，理想的做法是仅仅在常常被搜索的列（以及表）上面创建索引。
+    - CREATE INDEX index_name ON table_name(column_name): 创建简单索引，允许使用重复的值
+    - CREATE UNIQUE INDEX index_name ON table_name(column_name): 创建唯一索引，唯一索引意味着两个行不能拥有相同的索引值
+7. DROP语句
+    - 可以轻松的删除索引、表和数据库
+    - DROP INDEX index_name ON table_name
+    - SQL DROP TABLE 语句: DROP TABLE table_name
+    - TRUNCATE TABLE table_name: 仅仅删除表内数据，不删除表本身
+8. ALTER TABLE 语句
+    - 用于在已有的表中添加、修改或者删除列
+    - ALTER TABLE table_name ADD column_name datatype 添加列
+    - ALTER TABLE table_name DROP COLUMN column_name datatype
+9. Auto-Increment
+    - 会在新记录插入表中时生成一个唯一的数字
+10. SQL CREARE VIEW语句
+    - SQL语句结果集的可视化表
+    - **注释**：数据库的设计和结构不会受到视图中的函数、where或join语句的影响
+    - 语法：
+        ``` 
+            CREATE VIEW view_name AS
+            SELECT column_name(s)
+            FROM table_name
+            WHERE condition
+        ``` 
+11. NULL值
+    - NULL值是遗漏的未知数据，IS NULL和IS NOT NULL操作符
+    
