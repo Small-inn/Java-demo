@@ -19,6 +19,49 @@ SQL
    - SQL使我们有能力访问数据库
    - SQL是一种ANS（美国国家标准化组织）的标准计算机语言
    - SQL对大小写不敏感
+## 数据库列类型
+   - 数值
+        * tinyint 极小的数据 1个字节
+        * smallint 较小的数据 2个字节
+        * mediumint 中等大小  3个字节
+        * int    标准整数     4个字节
+        * bigint 较大的数据   8个字节
+        * float  浮点数      4个字节
+        * double 浮点数      8个字节
+        * decimal 字符串形式浮点数 金融计算，一般是decimal
+   - 字符串
+        * char 字符固定大小的 0-255
+        * varchar 可变字符串 0-65535 常用的string
+        * tinytext 微型文本 2^8 - 1 
+        * text 文本串 2^16 - 1  保存大文本 
+   - 时间日期
+        * date  YYYY-MM-HH 日期格式  
+        * time  HH:mm:SS 时间格式
+        * datetime  YYYY-MM-HH HH:mm:SS 最常用的时间格式
+        * timestamp   时间戳 1970到现在的毫秒数
+        * year  年 
+   - null
+        * 没有值，未知
+        * 注意，一般不要使用null进行运算，结果为null
+## 数据库字段属性
+   - Unsigned: 无符号的整数，不能声明为负数
+   - Zerofill: 0填充，不足的位数使用0填充
+   - 自增（auto increament）: 自动在上一条记录的基础上+1，通常用来设置唯一的主键，必须是整数类型，可以自定义设计主键自增的起始值和步长
+   - 非空（not null）: 如果不赋值，就会报错
+   - 默认（default）: 设置默认的值
+## 数据库引擎
+   - INNODB
+   - MYISAM
+   
+   | 项 | MYISAM | INNODB |
+   | --- | --- | ----- |
+   | 事务支持 | NO | YES | 
+   | 数据行锁定 | NO | YES | 
+   | 外键约束 | NO | YES | 
+   | 全文索引 | YES | NO | 
+   | 表空间大小 | 较小 | 较大，约为2倍 |
+   - MYISAM 节约空间，速度较快
+   - INNODB 安全性高，事务处理，多表多用户操作 
 ## 语法
 1. 数据操作语言（DML）
     - SELECT - 从数据库表中获取数据
