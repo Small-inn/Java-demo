@@ -119,7 +119,10 @@ SQL
 9. DELETE语句
     - 用于删除表中的行
     - DELETE FROM 表名称 WHERE 列名称 = 值
-    - DELETE FROM TABLE_NAME 、 DELETE * FROM TABLE_NAME 删除所有行 
+    - DELETE FROM TABLE_NAME 、 DELETE * FROM TABLE_NAME 删除所有行
+10. TRUNCATE语句
+    - 完全清空一个数据库表，表的结构和约束不会变
+    - TRUNCATE TABLENAME
 ## 高级语法
 1. TOP子句
     - 用于规定返回的记录的数目（注意：并是不所有的数据库系统都支持TOP子句）
