@@ -144,3 +144,15 @@ JAVA
    - 代表：
         * Collection: List(ArrayList)、Queue(LinkedList)、Set(HashSet)
         * Map: HashMap
+        
+        
+## Java内存分析
+   - 堆
+        * 存放new的对象个数组
+        * 可以被所有线程共享，不会存放别的对象引用 
+   - 栈
+        * 存放基本变量类型（会包含这个基本类型的具体数值）
+        * 引用对象的变量（会存放在这个引用的堆里面的具体地址）
+   - 方法区（特殊的堆）
+        * 可以被所有线程共享
+        * 包含了所有的class和static变量
