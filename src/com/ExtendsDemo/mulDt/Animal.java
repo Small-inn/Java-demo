@@ -1,4 +1,4 @@
-package study.mulDt;
+package com.ExtendsDemo.mulDt;
 
 public class Animal {
     public void eat() {

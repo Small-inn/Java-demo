@@ -1,4 +1,4 @@
-package study.extendsDemo;
+package com.ExtendsDemo.extendsDemo;
 
 public class Test {
     public static void main(String[] args) {

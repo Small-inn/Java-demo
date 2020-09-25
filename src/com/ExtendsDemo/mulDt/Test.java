@@ -1,4 +1,4 @@
-package study.mulDt;
+package com.ExtendsDemo.mulDt;
 
 public class Test {
     public static void main(String[] args) {

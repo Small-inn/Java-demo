@@ -1,4 +1,4 @@
-package study.extendsDemo;
+package com.ExtendsDemo.extendsDemo;
 
 public class Animal {
     public int age = 10;
