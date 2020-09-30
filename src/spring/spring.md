@@ -22,6 +22,11 @@
     - 基于SpringBoot实现的
     
 5. IOC理论
+
+6. 动态代理
+    - InvocationHandler，public interface InvocationHandler是由代理实例的调用处理程序实现的接口
+    - 每个代理实例都有一个关联的调用处理程序。 在代理实例上调用方法时，方法调用将被编码并调度到其调用处理程序的invoke方法。
+    - invoke(Object proxy, method, Object[] args): 处理代理实例上的方法调用并返回结果。 在与其关联的代理实例上调用方法时，将在调用处理程序上调用此方法。
     
 
     
